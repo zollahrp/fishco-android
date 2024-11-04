@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Fishco"
+        tools:targetApi="31">
+        <activity
+            android:name=".model.testActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.aquarium.AquariumFormActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.settings.SettingNavigationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.settings.ContactActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.settings.ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.settings.FAQActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.settings.FeedbackActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.settings.TermOfServiceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.scanner.ScannerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.home.HomepageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.aquarium.AquariumDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.aquarium.AquariumListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.chatbot.ChatbotActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.encyclopedia.FishDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.encyclopedia.FishListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.article.ArticleDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.article.ArticleListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.auth.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.auth.LoginActivity"
+            android:exported="false" />
+    </application>
+
+</manifest>
