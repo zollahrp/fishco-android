@@ -1,10 +1,191 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".activity.home.HomepageActivity">
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/blue_muda">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:gravity="center_vertical">
+
+            <!-- Text section -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/welcome_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hi, Cuko Pempek Enjoyer"
+                    android:textSize="16sp"
+                    android:textColor="@color/blue_tua1"/>
+
+                <TextView
+                    android:id="@+id/greeting_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Selamat Pagi!"
+                    android:textStyle="bold"
+                    android:textSize="24sp"
+                    android:textColor="@color/blue_tua1"/>
+            </LinearLayout>
+
+            <!-- Profile picture -->
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_profile"
+                android:background="@color/blue_primary"
+                android:padding="8dp"
+                android:scaleType="centerInside"
+                android:clipToOutline="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"/>
+        </LinearLayout>
+
+        <!-- Search Bar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="16dp"
+            android:layout_marginBottom="16dp">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="Search for fish"
+                android:background="@drawable/rounded_background"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:drawableLeft="@drawable/ic_search"
+                android:drawablePadding="10dp"/>
+        </LinearLayout>
+
+        <!-- Get Started Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Get Started"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="8dp"
+            android:textColor="@color/blue_tua1"/>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="16dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="160dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/get_started_image1"
+                    android:layout_marginEnd="8dp"
+                    android:scaleType="centerCrop"/>
+
+                <ImageView
+                    android:layout_width="160dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/get_started_image2"
+                    android:layout_marginEnd="8dp"
+                    android:scaleType="centerCrop"/>
+
+                <ImageView
+                    android:layout_width="160dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/get_started_image3"
+                    android:scaleType="centerCrop"/>
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <!-- Categories Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Categories"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="8dp"
+            android:textColor="@color/blue_tua1"/>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:columnCount="2">
+
+            <!-- Category Items -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:background="@color/blue_muda"
+                android:layout_margin="4dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:src="@drawable/freshwater_fish"
+                    android:scaleType="centerCrop"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Freshwater Fish"
+                    android:gravity="center"
+                    android:paddingTop="4dp"/>
+            </LinearLayout>
+
+            <!-- Repeat this LinearLayout for each category, adjusting the image and text -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:background="@color/blue_muda"
+                android:layout_margin="4dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:src="@drawable/marine_fish"
+                    android:scaleType="centerCrop"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Marine Fish"
+                    android:gravity="center"
+                    android:paddingTop="4dp"/>
+            </LinearLayout>
+
+            <!-- Add more category items as needed -->
+        </GridLayout>
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
