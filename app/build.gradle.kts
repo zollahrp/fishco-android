@@ -42,4 +42,5 @@ dependencies {
     androidTestImplementation(libs.espresso.core)
     compileOnly("org.projectlombok:lombok:1.18.34")
     annotationProcessor("org.projectlombok:lombok:1.18.34")
+    implementation ("androidx.constraintlayout:constraintlayout:2.1.4")
 }

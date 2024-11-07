@@ -17,29 +17,29 @@
         <RelativeLayout
             android:id="@+id/header"
             android:layout_width="match_parent"
-            android:layout_height="300dp">
+            android:layout_height="400dp">
 
             <!-- Gambar full tanpa margin atas, kanan, dan kiri -->
             <ImageView
                 android:id="@+id/fish_image"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/fish_image" <!-- Sesuaikan dengan ID gambar ikan -->
-                android:scaleType="centerCrop"
+                android:src="@drawable/fish_detail"
+                android:scaleType="fitXY"
                 android:adjustViewBounds="true"
                 android:backgroundTint="#FFFFFF"
-                android:background="@drawable/rounded_bottom" /> <!-- Rounded bottom drawable -->
+                android:background="@drawable/rounded_background" /> <!-- Rounded bottom drawable -->
 
             <!-- Tombol close (X) di pojok kiri atas -->
             <ImageButton
                 android:id="@+id/close_button"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/ic_close" <!-- Sesuaikan dengan ID ikon close -->
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:layout_margin="16dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true" />
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/close"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:layout_margin="16dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true" />
 
             <!-- Carousel indicator (titik-titik) di bawah gambar -->
             <LinearLayout
@@ -49,18 +49,21 @@
                 android:orientation="horizontal"
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
-                android:padding="8dp">
+                android:padding="8dp"
+                android:scaleType="fitXY">
 
                 <View
                     android:layout_width="8dp"
                     android:layout_height="8dp"
-                    android:background="@drawable/dot_active" /> <!-- Drawable untuk titik aktif -->
+                    android:background="@drawable/dot_active"
+                    android:scaleType="fitXY"/> <!-- Drawable untuk titik aktif -->
 
                 <View
                     android:layout_width="8dp"
                     android:layout_height="8dp"
                     android:layout_marginStart="4dp"
-                    android:background="@drawable/dot_inactive" /> <!-- Drawable untuk titik tidak aktif -->
+                    android:background="@drawable/dot_inactive"
+                    android:scaleType="fitXY"/> <!-- Drawable untuk titik tidak aktif -->
 
                 <!-- Tambahkan lebih banyak View jika ada lebih banyak slide -->
             </LinearLayout>
